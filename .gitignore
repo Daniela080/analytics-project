@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+dist/
+build/
+
+# Datos crudos (no van a Git)
+data/raw/*
+!data/raw/.gitkeep
+
+# Entorno
+.env
+.python-version

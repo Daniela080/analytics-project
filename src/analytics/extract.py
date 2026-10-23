@@ -112,7 +112,7 @@ def construir_dataset_base(tablas: dict[str, pd.DataFrame]) -> pd.DataFrame:
     Estrategia de joins:
         - orders x customers: left join on customer_id
         - + payments_agg: left join on order_id (total_pago, n_cuotas)
-        - + items_agg: left join on order_id (n_items, ticket_total)
+        - + items_agg: left join on order_id (n_items, precio_total, flete_total)
 
     Args:
         tablas: dict retornado por cargar_olist().
@@ -134,7 +134,8 @@ def construir_dataset_base(tablas: dict[str, pd.DataFrame]) -> pd.DataFrame:
         .groupby("order_id")
         .agg(
             n_items=("order_item_id", "count"),
-            ticket_total=("price", "sum"),
+            precio_total=("price", "sum"),
+            flete_total=("freight_value", "sum"),
         )
         .reset_index()
     )

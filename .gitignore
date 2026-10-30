@@ -15,3 +15,7 @@ data/raw/*
 # Entorno
 .env
 .python-version
+
+# Modelos entrenados (se regeneran con analytics.pipeline) y logs
+models/*.joblib
+logs/

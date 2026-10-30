@@ -1,0 +1,29 @@
+{
+  "fecha_entrenamiento": "2026-10-30T18:37:18.041256+00:00",
+  "version_sklearn": "1.9.1",
+  "metricas": {
+    "pipeline_tiempo_entrega": {
+      "rmse": 8.175584752313664,
+      "mae": 4.967303004285872,
+      "r2": 0.27908670274370984
+    },
+    "pipeline_review_negativa": {
+      "accuracy": 0.831785453407075,
+      "f1": 0.4498293515358362,
+      "roc_auc": 0.7564341255518976,
+      "matriz_confusion": [
+        [
+          14624,
+          2087
+        ],
+        [
+          1137,
+          1318
+        ]
+      ],
+      "accuracy_baseline": 0.8719085881248043,
+      "accuracy_modelo": 0.831785453407075,
+      "mejora": -0.040123134717729325
+    }
+  }
+}
